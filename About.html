@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likha Co. Website</title>
+
+    <!-- Style Css Link -->
+    <link rel="stylesheet" href="About.css">
+    <!-- Style Css Link -->
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome Cdn -->
+</head>
+<body>
+
+    <!-- Header Start -->
+    <div class="header">
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo"><a href="index.html"><img src="./images/index-logo.png" alt=""></a></div>
+                <ul class="links">
+                    <li><a href="index.html" id="first">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+			
+			<div class="search">
+				<input type="text" id="searchInput" placeholder="Search...">
+				<button type="button" id="searchButton">Enter</button>
+			</div>
+			
+			<script>
+				document.getElementById("searchButton").addEventListener("click", function() {
+				var searchTerm = document.getElementById("searchInput").value;
+				if (searchTerm.trim() !== "") {
+					// Redirect to different webpages based on search term
+				if (searchTerm === "index") {
+					window.location.href = "index.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "About") {
+					window.location.href = "About.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Products") {
+					window.location.href = "Products.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Contact") {
+					window.location.href = "Contact.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Reviews") {
+					window.location.href = "Reviews.html?search=" + encodeURIComponent(searchTerm);
+				} else {
+					// Default redirection for unknown search terms
+					window.location.href = "default_page.html?search=" + encodeURIComponent(searchTerm);
+				}
+				} else {
+					alert("Enter a search term.");
+				} // Optional: Listen for Enter key press to trigger search
+				searchInput.addEventListener('keydown', function(event) {
+				if (event.keyCode === 13) {
+				searchButton.click();
+				}
+				});
+				});
+			</script>
+			
+			<a href="log-In.html" class="login-link">
+			<button class="login-button">Log In</button></a>
+        </nav>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Section Start -->
+<section class="about-section-1" id="Likha_Co_Story">
+    <div class="about-img">
+        <img src="./images/about-pic-1.jpg" alt="">
+    </div>
+    <div class="about-text">
+        <h3>Likha Co's Story</h3>
+        <br>
+        <p>Likha Co. was formed with a strong dedication to environmental values and handcrafted workmanship. Our collaborative effort was motivated by the desire to promote ecologically friendly initiatives that required us to collaborate with skilled craftsmen to weave traditional fabric into modern patterns. Our strategy is also environmentally friendly, with a focus on sustainable materials and packaging methods, as well as energy-saving throughout manufacturing.<br><br> Our primary goal in giving information and resources to communities is to help them develop sustainable lives. We promote openness and traceability, which allow our customers to learn how their products are manufactured and where they originate from, among other things. In this way, we encourage people to join the sustainable ethical fashion movement, demonstrating that one may have style without losing knowledge of what they wear.</p>
+    </div>
+</section>
+
+<section class="about-section-2" id="how_we_can_help_customers">
+    <div class="about-img">
+        <img src="./images/about-pic-2.jpg" alt="">
+    </div>
+    <div class="about-text">
+        <h3>How we can help customers?</h3>
+        <br>
+        <p>Likha Co.'s business mission is to provide clients with not only visually beautiful fashion items but also products that are durable and environmentally friendly. Our offerings are crafted with meticulous labor and sustainable materials, which improve the consuming experience by providing long-lasting, trendy, and ethically manufactured fashion items.<br><br> We aspire to set industry standards for quality and sustainability so that each piece remains beautiful and durable for years to come. At the design stage, we put our raw materials through rigorous quality inspections that align with sustainable ideals. Throughout our supply chain, we carefully choose ecologically responsible suppliers and craftspeople who share our beliefs.<br><br> Concentrating on ethical standards and great craftsmanship, Likha Co.'s mission is to develop a heritage of reliability and perfection, resulting in items that people can wear with pride or confidence.</p>
+    </div>
+</section>
+
+<section class="about-section-3" id="brand_identity">
+    <div class="about-img">
+        <img src="./images/about-pic-3.jpg" alt="">
+    </div>
+    <div class="about-text">
+        <h3>Likha Co's Brand Identity:</h3>
+        <br>
+        <p>Likha Co. is distinguished by a unique brand identity that skillfully blends traditional craftsmanship with contemporary design. Our goal is to ensure that ethically concerned consumers' styles adhere to criteria of class, permanence, and ecological responsibility.<br><br> These items are not only visually appealing, but they also seek to be environmentally responsible; hence, each piece of merchandise helps to make the world a better place for everyone. Our packaging materials are eco-friendly because they use a basic design idea that allows them to be recycled and reduces environmental impact.<br><br> We share our sustainability journey with clients because we believe in transparency, which promotes true living among those who value authenticity and excellent lifestyle choices.</p>
+    </div>
+</section>
+
+<section class="about-section-4" id="location">
+    <div class="about-img">
+        <img src="./images/about-pic-4.jpg" alt="">
+    </div>
+    <div class="about-text">
+        <h3>Location of Likha Co:</h3>
+        <br>
+        <p>Likha Co. may be found both online and at real retail locations. It can reach a larger worldwide audience by offering its items on well-known marketplaces like Shopee and Lazada and through an e-commerce website with a strong online presence.<br><br> Social media platforms like Facebook, TikTok, and Instagram may be utilized for brand exposure, consumer loyalty, and marketing communications. This will assist create an all-encompassing holistic approach that includes both online and offline sales prospects.</p>
+    </div>
+</section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="./images/footer-logo.png" alt="">
+            </div>
+			<br>
+            <h2><p>Elevate your style naturally with Likha's Company.</p></h2>
+            <div class="socail-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <hr>
+    </footer>
+	    <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+</body>

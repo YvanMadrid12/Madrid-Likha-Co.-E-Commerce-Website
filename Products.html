@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likha Co. Website</title>
+
+    <!-- Style CSS Link -->
+    <link rel="stylesheet" href="Products.css">
+    <!-- Style CSS Link -->
+	
+	<script src="Products.js"></script>
+	
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome CDN -->
+
+    <style>
+        .order-summary {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+ <!-- Header Start -->
+    <div class="header">
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo"><a href="index.html"><img src="./images/index-logo.png" alt=""></a></div>
+
+                <ul class="links">
+                    <li><a href="index.html" id="first">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+			
+			<div class="search">
+				<input type="text" id="searchInput" placeholder="Search...">
+				<button type="button" id="searchButton">Enter</button>
+			</div>
+			
+			<script>
+				document.getElementById("searchButton").addEventListener("click", function() {
+				var searchTerm = document.getElementById("searchInput").value;
+				if (searchTerm.trim() !== "") {
+					// Redirect to different webpages based on search term
+				if (searchTerm === "index") {
+					window.location.href = "index.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "About") {
+					window.location.href = "About.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Products") {
+					window.location.href = "Products.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Contact") {
+					window.location.href = "Contact.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Reviews") {
+					window.location.href = "Reviews.html?search=" + encodeURIComponent(searchTerm);
+				} else {
+					// Default redirection for unknown search terms
+					window.location.href = "default_page.html?search=" + encodeURIComponent(searchTerm);
+				}
+				} else {
+					alert("Enter a search term.");
+				} // Optional: Listen for Enter key press to trigger search
+				searchInput.addEventListener('keydown', function(event) {
+				if (event.keyCode === 13) {
+				searchButton.click();
+				}
+				});
+				});
+			</script>
+			
+			<a href="log-In.html" class="login-link">
+			<button class="login-button">Log In</button></a>
+        </nav>
+    </div>
+ <!-- Header End -->
+
+<section class="product" id="products">
+    <div class="main-txt">
+        <h3>Likha Co's Products</h3>
+    </div>
+    <div class="card-content">
+        <div class="row">
+            <div class="card">
+                <img src="./images/product-pic-5.jpg" alt="">
+                <div class="products_text">
+                    <h2>Quilted Bag</h2>
+                    <p>Yvan's Collection</p>
+                    <h3>Price: PHP 699.00 to PHP 349.00</h3>
+                    <button class="add-to-cart" data-name="Quilted Bag" data-price="349.00">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="./images/product-pic-4.jpg" alt="">
+                <div class="products_text">
+                    <h2>Baguette Bag</h2>
+                    <p>Jap's Collection</p>
+                    <h3>Price: PHP 1,299.00</h3>
+                    <button class="add-to-cart" data-name="Baguette Bag" data-price="1299.00">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="./images/product-pic-6.jpg" alt="">
+                <div class="products_text">
+                    <h2>Messenger Bag</h2>
+                    <p>Jap's Collection</p>
+                    <h3>Price: PHP 899.00 to PHP 449.50</h3>
+                    <button class="add-to-cart" data-name="Messenger Bag" data-price="449.50">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="./images/product-pic-2.jpg" alt="">
+                <div class="products_text">
+                    <h2>Sachel Bag</h2>
+                    <p>Yvan's Collection</p>
+                    <h3>Price: PHP 899.00 to PHP 449.50</h3>
+                    <button class="add-to-cart" data-name="Sachel Bag" data-price="449.50">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="./images/product-pic-3.jpg" alt="">
+                <div class="products_text">
+                    <h2>Duffel Bag</h2>
+                    <p>Yvan's Collection</p>
+                    <h3>Price: PHP 1,299.00</h3>
+                    <button class="add-to-cart" data-name="Duffel Bag" data-price="1299.00">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="./images/product-pic-1.jpg" alt="">
+                <div class="products_text">
+                    <h2>Bucket Bag</h2>
+                    <p>Yvan's Collection</p>
+                    <h3>Price: PHP 499.00 to PHP 249.50</h3>
+                    <button class="add-to-cart" data-name="Bucket Bag" data-price="249.50">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+		<div class="order-summary" id="order-summary">
+		<h2>Order Summary</h2>
+        <div id="cart-details" style="display: none;">
+            <!-- Product details will be displayed here -->
+        </div>
+        <button id="pay-now">Pay Now</button>
+		</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = parseFloat(this.getAttribute('data-price'));
+                addToCart(name, price);
+            });
+        });
+
+        function addToCart(name, price) {
+            const cartDetails = document.getElementById('cart-details');
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <div>Name: ${name}</div>
+                <div>Price: PHP ${price.toFixed(2)}</div>
+                <hr>
+            `;
+            cartDetails.appendChild(cartItem);
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            let totalPrice = 0;
+            cartItems.forEach(item => {
+                const priceString = item.querySelector('div:nth-child(2)').textContent;
+                const price = parseFloat(priceString.replace('Price: PHP ', ''));
+                totalPrice += price;
+            });
+            const totalElement = document.createElement('div');
+            totalElement.textContent = `Total Price: PHP ${totalPrice.toFixed(2)}`;
+            const cartDetails = document.getElementById('cart-details');
+            cartDetails.appendChild(totalElement);
+        }
+    });
+</script>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="./images/footer-logo.png" alt="">
+            </div>
+			<br>
+            <h2><p>Elevate your style naturally with Likha's Company.</p></h2>
+            <div class="socail-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <hr>
+    </footer>
+	    <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likha Co. Website</title>
+
+    <!-- Style Css Link -->
+    <link rel="stylesheet" href="Reviews.css">
+    <!-- Style Css Link -->
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome Cdn -->
+
+</head>
+<body>
+    <!-- Header Start -->
+    <div class="header">
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo"><a href="index.html"><img src="./images/index-logo.png" alt=""></a></div>
+
+                <ul class="links">
+                    <li><a href="index.html" id="first">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+			
+			<div class="search">
+				<input type="text" id="searchInput" placeholder="Search...">
+				<button type="button" id="searchButton">Enter</button>
+			</div>
+			
+			<script>
+				document.getElementById("searchButton").addEventListener("click", function() {
+				var searchTerm = document.getElementById("searchInput").value;
+				if (searchTerm.trim() !== "") {
+					// Redirect to different webpages based on search term
+				if (searchTerm === "index") {
+					window.location.href = "index.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "About") {
+					window.location.href = "About.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Products") {
+					window.location.href = "Products.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Contact") {
+					window.location.href = "Contact.html?search=" + encodeURIComponent(searchTerm);
+				} else if (searchTerm === "Reviews") {
+					window.location.href = "Reviews.html?search=" + encodeURIComponent(searchTerm);
+				} else {
+					// Default redirection for unknown search terms
+					window.location.href = "default_page.html?search=" + encodeURIComponent(searchTerm);
+				}
+				} else {
+					alert("Enter a search term.");
+				} // Optional: Listen for Enter key press to trigger search
+				searchInput.addEventListener('keydown', function(event) {
+				if (event.keyCode === 13) {
+				searchButton.click();
+				}
+				});
+				});
+			</script>
+			
+			<a href="log-In.html" class="login-link">
+			<button class="login-button">Log In</button></a>
+        </nav>
+    </div>
+    <!-- Header End -->
+
+    <!-- Review Section Start -->
+    <section class="review" id="review">
+        <div class="main-txt">
+            <h1>Customers <span>Review</span></h1>
+        </div>
+
+        <div class="review-content">
+        <div class="box">
+        <div class="img">
+            <img src="./images/nadine-lustre.jpg" alt="">
+        </div>
+        <h3>Nadine Lustre</h3>
+        <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+        </div>
+		<br>
+        <p>I often get recognized for the gorgeous and well-made rattan bags from this shop. From beginning to end, customer service guarantees a flawless shopping experience.</p>
+    </div>
+	
+        <div class="box">
+        <div class="img">
+            <img src="./images/win-metawin.png" alt="">
+        </div>
+        <h3>Win Metawin</h3>
+        <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+        </div>
+		<br>
+        <p>I love my rattan bag from this shop! The quality is exceptional, and it arrived quickly with beautiful packaging.</p>
+    </div>
+	
+        <div class="box">
+        <div class="img">
+            <img src="./images/kathryn-bernardo.jpg" alt="">
+        </div>
+        <h3>Kathryn Bernardo</h3>
+        <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+        </div>
+		<br>
+        <p>This shop offers the best rattan bags I’ve ever seen. Stylish, durable, and perfect for any outfit—highly recommend!</p>
+		</div>
+		
+	<div class="box">
+        <div class="img">
+            <img src="./images/yvan-madrid.jpg" alt="">
+        </div>
+        <h3>Yvan Madrid</h3>
+        <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+        </div>
+		<br>
+        <p>My experience with this rattan bag shop has been fantastic. The bag is gorgeous, and the team was very responsive to my questions.</p>
+	</div>
+	
+	<div class="box">
+        <div class="img">
+            <img src="./images/john-adrianne-paul.jpg" alt="">
+        </div>
+        <h3>John Adrianne Paul</h3>
+        <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+        </div>
+		<br>
+        <p>The craftsmanship of these rattan bags is top-notch. I’ve received so many compliments, and the customer support was very helpful.</p>
+	</div>
+	
+	<div class="box">
+        <div class="img">
+            <img src="./images/michelle-dee.png" alt="">
+        </div>
+        <h3>Michelle Dee</h3>
+        <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+        </div>
+		<br>
+        <p>I’m thrilled with my purchase! The rattan bag is not only beautiful but also very sturdy. Excellent service and fast shipping.</p>
+	</div>
+
+</div>
+    </section>
+    <!-- Review Section End -->
+	
+	    <!-- Footer Start -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="./images/footer-logo.png" alt="">
+            </div>
+			<br>
+            <h2><p>Elevate your style naturally with Likha's Company.</p></h2>
+            <div class="socail-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+        <hr>
+    </footer>
+	<a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+    <!-- Footer End -->
+</body>
+</html>
